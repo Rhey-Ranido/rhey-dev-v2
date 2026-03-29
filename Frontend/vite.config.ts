@@ -5,7 +5,7 @@ import { tanstackRouter } from "@tanstack/router-plugin/vite";
 import viteReact from "@vitejs/plugin-react";
 import tailwindcss from "@tailwindcss/vite";
 
-export const config = defineConfig({
+const config = defineConfig({
   plugins: [
     devtools(),
     tailwindcss(),
@@ -19,3 +19,5 @@ export const config = defineConfig({
     },
   },
 });
+
+export default config
