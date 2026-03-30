@@ -10,7 +10,10 @@ const config = defineConfig({
     devtools(),
     tailwindcss(),
     tanstackRouter({ target: "react", autoCodeSplitting: true }),
-    viteReact(),
+    viteReact({
+      // Ensure React is not duplicated in the bundle
+      jsxRuntime: 'automatic',
+    }),
   ],
   resolve: {
     alias: {

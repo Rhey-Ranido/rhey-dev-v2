@@ -1,6 +1,8 @@
 import { Outlet, createRootRoute } from "@tanstack/react-router";
-import { TanStackRouterDevtoolsPanel } from "@tanstack/react-router-devtools";
-import { TanStackDevtools } from "@tanstack/react-devtools";
+import { TanStackRouterDevtools } from "@tanstack/react-router-devtools";
+import { ThemeProvider } from "#/components/theme-provider";
+import { BackgroundGradient } from "#/components/BackgroundGradient";
+import { Header } from "#/components/Header";
 
 export const Route = createRootRoute({
   component: RootComponent,
@@ -8,19 +10,13 @@ export const Route = createRootRoute({
 
 function RootComponent() {
   return (
-    <>
-      <Outlet />
-      <TanStackDevtools
-        config={{
-          position: "bottom-right",
-        }}
-        plugins={[
-          {
-            name: "TanStack Router",
-            render: <TanStackRouterDevtoolsPanel />,
-          },
-        ]}
-      />
-    </>
+    <ThemeProvider defaultTheme="dark" storageKey="rhey-dev-theme">
+      <BackgroundGradient />
+      <Header />
+      <main className="relative z-10">
+        <Outlet />
+      </main>
+      <TanStackRouterDevtools position="bottom-right" />
+    </ThemeProvider>
   );
 }
