@@ -17,7 +17,6 @@ export const StickySidebar = () => {
   const [activeId, setActiveId] = useState<string>("");
 
   useEffect(() => {
-    const observers = new Map<string, IntersectionObserver>();
     
     const callback = (entries: IntersectionObserverEntry[]) => {
       entries.forEach((entry) => {
@@ -73,7 +72,7 @@ export const StickySidebar = () => {
         >
           <span
             className={cn(
-              "h-[1px] transition-all duration-300 bg-current",
+              "h-px transition-all duration-300 bg-current",
               activeId === item.id ? "w-8" : "w-4 group-hover:w-8"
             )}
           />

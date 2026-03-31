@@ -1,5 +1,5 @@
 import { PROFILE } from "../constants/about-data";
-import { FiCalendar, FiChevronRight, FiLinkedin, FiMail } from "react-icons/fi";
+import { FiChevronRight, FiLinkedin, FiMail } from "react-icons/fi";
 import { SiUpwork } from "react-icons/si";
 import { ScheduleCallButton } from "#/components/ui/ScheduleCallButton";
 
@@ -19,7 +19,9 @@ export const AboutHero = () => {
     <div className="flex flex-col gap-8">
       {/* Schedule Link */}
       <div className="w-fit">
-        <ScheduleCallButton chevronIcon={<FiChevronRight className="size-3 sm:size-4 transition-transform group-hover:translate-x-1" />} />
+        <ScheduleCallButton
+          chevronIcon={<FiChevronRight className="size-3 sm:size-4 transition-transform group-hover:translate-x-1" />}
+        />
       </div>
 
       {/* Name and Role */}
