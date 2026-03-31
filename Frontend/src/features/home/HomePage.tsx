@@ -3,7 +3,9 @@ import { Section } from "#/components/layout/Section";
 import { Hero } from "./components/Hero";
 import { Projects } from "./components/Projects";
 import { ToolStack } from "./components/ToolStack";
-import { BlogSection } from "./components/BlogSection";
+import { HowItWorks } from "./components/HowItWorks";
+import { Services } from "./components/Services";
+// import { BlogSection } from "./components/BlogSection";
 import { ONCE_UI, SHOP_SPARK, FLOW_TASK } from "./constants/projects";
 
 export const HomePage = () => {
@@ -16,9 +18,16 @@ export const HomePage = () => {
       </Section>
 
       {/* Featured Projects Section */}
-      <Section className="py-20 md:py-32">
+      <Section className="py-20">
         <Container variant="narrow">
           <Projects projects={[ONCE_UI]} />
+        </Container>
+      </Section>
+
+      {/* Services Section */}
+      <Section className="py-20 border-y border-border/40">
+        <Container variant="wide">
+          <Services />
         </Container>
       </Section>
 
@@ -29,19 +38,26 @@ export const HomePage = () => {
       </Section>
 
       {/* All Projects / Professional Work Section */}
-      <Section className="py-20 md:py-32">
+      <Section className="py-20">
         <Container variant="narrow">
           <Projects projects={[SHOP_SPARK]} />
         </Container>
       </Section>
 
-      <Section className="">
-        <Container variant="narrow">
-          <BlogSection />
+      {/* How It Works Section */}
+      <Section className="py-20">
+        <Container variant="wide">
+          <HowItWorks />
         </Container>
       </Section>
 
-      <Section className="py-20 md:py-32">
+      {/* <Section className="">
+        <Container variant="narrow">
+          <BlogSection />
+        </Container>
+      </Section> */}
+
+      <Section className="py-20">
         <Container variant="narrow">
           <Projects projects={[FLOW_TASK]} />
         </Container>

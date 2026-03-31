@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
-import { FiArrowUpRight, FiChevronLeft, FiChevronRight } from "react-icons/fi";
-import { useState } from "react";
+import { FiArrowUpRight, FiChevronLeft, FiChevronRight, FiCheck } from "react-icons/fi";
+import { useState, useEffect, useRef } from "react";
 import type { Project } from "../constants/projects";
 
 interface ProjectsProps {
@@ -9,10 +9,76 @@ interface ProjectsProps {
 
 export const Projects = ({ projects }: ProjectsProps) => {
   return (
-    <div className="flex flex-col gap-24">
+    <div className="flex flex-col gap-16">
       {projects.map((project, index) => (
         <ProjectCard key={index} project={project} />
       ))}
+    </div>
+  );
+};
+
+const AutomationImpact = ({ impact }: { impact: { before: string; after: string } }) => {
+  const [isAutomated, setIsAutomated] = useState(false);
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (!entry.isIntersecting) {
+          setIsAutomated(false);
+        }
+      },
+      { threshold: 0 }
+    );
+
+    if (containerRef.current) {
+      observer.observe(containerRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
+  return (
+    <div
+      ref={containerRef}
+      className="flex items-center h-10 overflow-hidden font-medium select-none cursor-default w-full"
+      onMouseEnter={() => setIsAutomated(true)}
+    >
+      <div className="relative flex items-center w-full">
+        {/* Before State */}
+        <div
+          className={`flex items-center transition-all duration-500 ease-in-out ${
+            isAutomated
+              ? "opacity-0 -translate-x-full absolute pointer-events-none delay-500"
+              : "opacity-100 translate-x-0 relative"
+          }`}
+        >
+          <span className="text-lg text-destructive whitespace-nowrap relative">
+            {impact.before}
+            <span
+              className={`absolute top-1/2 left-0 h-0.5 bg-destructive transition-all duration-800 ease-in-out ${
+                isAutomated ? "w-full" : "w-0"
+              }`}
+            />
+          </span>
+        </div>
+
+        {/* After State */}
+        <div
+          className={`flex items-center gap-2 transition-all duration-700 ease-[cubic-bezier(0.23,1,0.32,1)] ${
+            isAutomated
+              ? "opacity-100 translate-x-0 relative delay-700"
+              : "opacity-0 translate-x-8 absolute pointer-events-none"
+          }`}
+        >
+          <span className="text-xl text-emerald-500 drop-shadow-[0_0_12px_rgba(16,185,129,0.3)] dark:text-emerald-400 whitespace-nowrap">
+            {impact.after}
+          </span>
+          <div className="p-0.5 rounded-full bg-emerald-500/10 text-emerald-500 shadow-[0_0_15px_rgba(16,185,129,0.2)] dark:bg-emerald-400/10 dark:text-emerald-400">
+            <FiCheck className="size-4" />
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
@@ -29,9 +95,9 @@ const ProjectCard = ({ project }: { project: Project }) => {
   };
 
   return (
-    <div className="group flex flex-col gap-10">
+    <div className="group flex flex-col gap-6">
       {/* Project Image Display */}
-      <div className="relative overflow-hidden rounded-3xl border border-primary/5 bg-muted transition-all duration-500 hover:border-primary/10 max-h-[600px] flex items-center justify-center">
+      <div className="relative overflow-hidden rounded-3xl border border-primary/5 bg-muted transition-all duration-500 hover:border-primary/10 max-h-96 flex items-center justify-center">
         {project.images.map((image, idx) => (
           <img
             key={idx}
@@ -49,17 +115,17 @@ const ProjectCard = ({ project }: { project: Project }) => {
             <div className="absolute inset-x-4 top-1/2 -translate-y-1/2 flex justify-between opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
               <button
                 onClick={prevImage}
-                className="size-10 rounded-full bg-black/40 text-white backdrop-blur-md flex items-center justify-center hover:bg-black/60 transition-colors pointer-events-auto"
+                className="size-8 rounded-full bg-black/40 text-white backdrop-blur-md flex items-center justify-center hover:bg-black/60 transition-colors pointer-events-auto"
                 aria-label="Previous image"
               >
-                <FiChevronLeft className="size-6" />
+                <FiChevronLeft className="size-5" />
               </button>
               <button
                 onClick={nextImage}
-                className="size-10 rounded-full bg-black/40 text-white backdrop-blur-md flex items-center justify-center hover:bg-black/60 transition-colors pointer-events-auto"
+                className="size-8 rounded-full bg-black/40 text-white backdrop-blur-md flex items-center justify-center hover:bg-black/60 transition-colors pointer-events-auto"
                 aria-label="Next image"
               >
-                <FiChevronRight className="size-6" />
+                <FiChevronRight className="size-5" />
               </button>
             </div>
 
@@ -67,7 +133,7 @@ const ProjectCard = ({ project }: { project: Project }) => {
               {project.images.map((_, idx) => (
                 <div
                   key={idx}
-                  className={`h-1 transition-all rounded-full ${
+                  className={`h-0.5 transition-all rounded-full ${
                     idx === currentImageIndex ? "w-8 bg-white" : "w-1.5 bg-white/40"
                   }`}
                 />
@@ -78,35 +144,22 @@ const ProjectCard = ({ project }: { project: Project }) => {
       </div>
 
       {/* Project Details */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-start px-2">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-start px-2">
         <div>
-          <h3 className="text-3xl md:text-5xl font-semibold tracking-tight text-foreground text-balance">
+          <h3 className="text-2xl md:text-4xl font-semibold tracking-tight text-foreground text-balance">
             {project.title}
           </h3>
         </div>
 
-        <div className="flex flex-col gap-8">
-          {/* Avatars */}
-          {project.avatars && (
-            <div className="flex items-center -space-x-3">
-              {project.avatars.map((avatar, i) => (
-                <div
-                  key={i}
-                  className="w-11 h-11 rounded-full border-2 border-background overflow-hidden bg-muted transition-transform hover:z-10 hover:scale-110"
-                >
-                  <img src={avatar} alt="Contributor" className="w-full h-full object-cover" />
-                </div>
-              ))}
-            </div>
-          )}
+        <div className="flex flex-col gap-2">
+          {/* Automation Impact Animation */}
+          {project.impact && <AutomationImpact impact={project.impact} />}
 
-          <p className="text-lg text-muted-foreground leading-relaxed">
-            {project.description}
-          </p>
+          <p className="text-base text-muted-foreground leading-relaxed">{project.description}</p>
 
           <Link
             to={project.link}
-            className="inline-flex items-center gap-2 group/link text-primary hover:text-primary/80 font-medium transition-colors w-fit text-lg"
+            className="inline-flex items-center gap-2 group/link text-primary hover:text-primary/80 font-medium transition-colors w-fit text-base"
           >
             Read case study
             <FiArrowUpRight className="transition-transform group-hover/link:translate-x-1 group-hover/link:-translate-y-1" />

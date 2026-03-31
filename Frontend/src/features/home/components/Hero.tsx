@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
-import { Button } from "#/components/ui/Button";
-import { FiCalendar } from "react-icons/fi";
+// import { Button } from "#/components/ui/Button";
+// import { FiCalendar } from "react-icons/fi";
 
 export const Hero = () => {
   return (
@@ -36,7 +36,7 @@ export const Hero = () => {
         to="/about"
         className="group flex items-center gap-3 px-4 py-2 transition-all border rounded-full bg-primary/5 dark:bg-black/40 border-primary/10 hover:border-primary/20 hover:bg-primary/10 dark:hover:bg-black/60 backdrop-blur-md animate-in fade-in slide-in-from-bottom-12 duration-1000 delay-500"
       >
-        <div className="flex items-center justify-center w-8 h-8 overflow-hidden bg-gradient-to-br from-primary/20 to-primary/5 dark:from-white/20 dark:to-white/5 rounded-full border border-primary/10">
+        <div className="flex items-center justify-center w-8 h-8 overflow-hidden bg-linear-to-br from-primary/20 to-primary/5 dark:from-white/20 dark:to-white/5 rounded-full border border-primary/10">
           <img
             src="https://github.com/Rhey-Ranido.png"
             alt="Rhey Ranido"
