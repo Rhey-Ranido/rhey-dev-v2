@@ -10,7 +10,7 @@ export const BlogSection = () => {
       </div>
 
       <div className="w-full md:w-2/3 grid grid-cols-1 md:grid-cols-2 gap-12">
-        {BLOG_POSTS.map((post, index) => (
+        {BLOG_POSTS.slice(0, 2).map((post, index) => (
           <div key={index} className="flex flex-col gap-6 group cursor-pointer hover:bg-muted/30 p-4 -m-4 rounded-lg transition-colors">
             <div className="flex items-center gap-3">
               <img
@@ -22,7 +22,7 @@ export const BlogSection = () => {
               <span className="text-sm text-muted-foreground">{post.date}</span>
             </div>
             
-            <h3 className="text-2xl font-semibold group-hover:text-primary transition-colors leading-snug">
+            <h3 className="text-2xl font-semibold group-hover:text-primary transition-colors leading-snug text-foreground">
               {post.title}
             </h3>
             

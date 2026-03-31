@@ -31,7 +31,7 @@ const ProjectCard = ({ project }: { project: Project }) => {
   return (
     <div className="group flex flex-col gap-10">
       {/* Project Image Display */}
-      <div className="relative overflow-hidden rounded-3xl border border-foreground/5 bg-muted transition-all duration-500 hover:border-foreground/10 max-h-[600px] flex items-center justify-center">
+      <div className="relative overflow-hidden rounded-3xl border border-primary/5 bg-muted transition-all duration-500 hover:border-primary/10 max-h-[600px] flex items-center justify-center">
         {project.images.map((image, idx) => (
           <img
             key={idx}
@@ -106,7 +106,7 @@ const ProjectCard = ({ project }: { project: Project }) => {
 
           <Link
             to={project.link}
-            className="inline-flex items-center gap-2 group/link text-sky-500 hover:text-sky-400 font-medium transition-colors w-fit text-lg"
+            className="inline-flex items-center gap-2 group/link text-primary hover:text-primary/80 font-medium transition-colors w-fit text-lg"
           >
             Read case study
             <FiArrowUpRight className="transition-transform group-hover/link:translate-x-1 group-hover/link:-translate-y-1" />

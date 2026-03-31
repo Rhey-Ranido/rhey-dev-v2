@@ -63,7 +63,7 @@ export const ToolStack = () => {
 const ToolBadge = ({ tool }: { tool: (typeof TOOLS)[0] }) => {
   const Icon = tool.icon;
   return (
-    <div className="flex items-center gap-3 px-6 py-3 rounded-full border border-foreground/10 bg-foreground/5 backdrop-blur-sm whitespace-nowrap group hover:border-foreground/20 hover:bg-foreground/10 transition-colors duration-300">
+    <div className="flex items-center gap-3 px-6 py-3 rounded-full border border-primary/10 bg-primary/5 backdrop-blur-sm whitespace-nowrap group hover:border-primary/20 hover:bg-primary/10 transition-colors duration-300">
       <Icon className="size-5 text-foreground/70 group-hover:text-foreground transition-colors" />
       <span className="text-sm font-medium text-foreground/80 group-hover:text-foreground transition-colors">
         {tool.name}

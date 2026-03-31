@@ -27,7 +27,7 @@ export const SectionHeader = ({ title, description, className, align = "center" 
     >
       <h2 className="text-2xl text-foreground">{title}</h2>
 
-      {description && <p className="text-xl">{description}</p>}
+      {description && <p className="text-xl text-muted-foreground">{description}</p>}
     </div>
   );
 };
