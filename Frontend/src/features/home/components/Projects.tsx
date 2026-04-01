@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { FiArrowUpRight, FiChevronLeft, FiChevronRight, FiCheck } from "react-icons/fi";
+import { FiArrowUpRight, FiCheck } from "react-icons/fi";
 import { useState, useEffect, useRef } from "react";
 import type { ProjectV2 } from "../../projects/constants/projects_v2";
 

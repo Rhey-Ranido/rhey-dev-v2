@@ -31,8 +31,7 @@ export const PROJECTS_V2: ProjectV2[] = [
     title: "Email Attachment AI Organizer",
     description:
       "Automatically watches Gmail for incoming attachments, classifies them with AI, renames files descriptively, and uploads them to the correct Google Drive folder — all without human intervention.",
-    image:
-      "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=2070&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=2070&auto=format&fit=crop",
     tags: ["Make.com", "Gmail API", "Google Drive API", "OpenAI API"],
     category: "Make",
     link: "/projects/email-ai-organizer",
@@ -66,8 +65,7 @@ export const PROJECTS_V2: ProjectV2[] = [
     title: "Multi-Step Client Onboarding",
     description:
       "Synchronized user onboarding across Stripe, Slack, PostgreSQL, and SendGrid — triggered automatically on checkout completion with zero manual steps.",
-    image:
-      "https://images.unsplash.com/photo-1551288049-bbda6465fba1?q=80&w=2070&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1551288049-bbda6465fba1?q=80&w=2070&auto=format&fit=crop",
     tags: ["Make.com", "Slack API", "Stripe", "PostgreSQL"],
     category: "Make",
     link: "/projects/make-onboarding",
@@ -87,13 +85,7 @@ export const PROJECTS_V2: ProjectV2[] = [
       { label: "ERROR RATE", value: "Near 0%" },
       { label: "CLIENT SATISFACTION", value: "Significantly Higher" },
     ],
-    toolsUsed: [
-      "Make.com",
-      "Stripe API",
-      "Slack API",
-      "PostgreSQL",
-      "SendGrid",
-    ],
+    toolsUsed: ["Make.com", "Stripe API", "Slack API", "PostgreSQL", "SendGrid"],
     videoUrl: "https://drive.google.com/file/d/YOUR_VIDEO_ID_HERE/view",
   },
 
@@ -102,8 +94,7 @@ export const PROJECTS_V2: ProjectV2[] = [
     title: "Lead Qualification & Prioritization",
     description:
       "Real-time lead scoring and prioritization using AI to enrich incoming webhook data, store records in SQL, and instantly alert sales teams of high-value prospects.",
-    image:
-      "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070&auto=format&fit=crop",
     tags: ["Zapier", "Webhook API", "SQL Database", "Gemini API"],
     category: "Zapier",
     link: "/projects/lead-qualification",
@@ -138,8 +129,7 @@ export const PROJECTS_V2: ProjectV2[] = [
     title: "Zero-Touch Automated Invoicing",
     description:
       "Automated invoice generation and payment tracking from Stripe sales directly into QuickBooks — eliminating manual data entry and Friday accounting marathons.",
-    image:
-      "https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=2011&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=2011&auto=format&fit=crop",
     tags: ["Zapier", "QuickBooks", "Stripe", "Gmail"],
     category: "Zapier",
     link: "/projects/zapier-invoicing",
@@ -159,12 +149,7 @@ export const PROJECTS_V2: ProjectV2[] = [
       { label: "INVOICE DELIVERY", value: "Instant" },
       { label: "COST SAVED", value: "$150-$250/month" },
     ],
-    toolsUsed: [
-      "Zapier",
-      "Stripe API",
-      "QuickBooks Online",
-      "Gmail API",
-    ],
+    toolsUsed: ["Zapier", "Stripe API", "QuickBooks Online", "Gmail API"],
     videoUrl: "https://drive.google.com/file/d/YOUR_VIDEO_ID_HERE/view",
   },
 
@@ -173,8 +158,7 @@ export const PROJECTS_V2: ProjectV2[] = [
     title: "AI Exam Checker Workflow",
     description:
       "Automatically checks exams submitted to Google Drive, evaluates essays with AI scoring using a rubric, and logs results with feedback directly into Google Sheets.",
-    image:
-      "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?q=80&w=2070&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?q=80&w=2070&auto=format&fit=crop",
     tags: ["n8n", "Gemini API", "Google Sheets API", "Google Drive API"],
     category: "n8n",
     link: "/projects/ai-exam-checker",
@@ -194,22 +178,14 @@ export const PROJECTS_V2: ProjectV2[] = [
       { label: "TEACHER HOURS SAVED", value: "10+ hrs/week" },
       { label: "STUDENT SATISFACTION", value: "Significantly Higher" },
     ],
-    toolsUsed: [
-      "n8n",
-      "Gemini API",
-      "Google Sheets API",
-      "Google Drive API",
-      "OCR Engine",
-      "Slack",
-    ],
+    toolsUsed: ["n8n", "Gemini API", "Google Sheets API", "Google Drive API", "OCR Engine", "Slack"],
     videoUrl: "https://drive.google.com/file/d/YOUR_VIDEO_ID_HERE/view",
   },
   {
     title: "Discord Server Moderation Bot",
     description:
       "Automates moderation actions, role-based alerts, and scheduled community messages for a Discord server — providing 24/7 protection without constant human supervision.",
-    image:
-      "https://images.unsplash.com/photo-1614680376593-902f74cf0d41?q=80&w=2074&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1614680376593-902f74cf0d41?q=80&w=2074&auto=format&fit=crop",
     tags: ["n8n", "Discord API", "Webhook API", "Rule-based Logic"],
     category: "n8n",
     link: "/projects/discord-mod-bot",
@@ -229,21 +205,14 @@ export const PROJECTS_V2: ProjectV2[] = [
       { label: "RESPONSE TIME", value: "< 1 second" },
       { label: "STAFF HOURS SAVED", value: "20+ hrs/week" },
     ],
-    toolsUsed: [
-      "n8n",
-      "Discord API",
-      "Webhook API",
-      "Regex Patterns",
-      "PostgreSQL",
-    ],
+    toolsUsed: ["n8n", "Discord API", "Webhook API", "Regex Patterns", "PostgreSQL"],
     videoUrl: "https://drive.google.com/file/d/YOUR_VIDEO_ID_HERE/view",
   },
   {
     title: "Facebook Page AI Support Agent",
     description:
       "Automated page assistant that answers customer questions with updated service and hiring information pulled live from Google Sheets — powered by Gemini AI.",
-    image:
-      "https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=2070&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=2070&auto=format&fit=crop",
     tags: ["n8n", "Meta Developer API", "Gemini API", "Google Sheets API"],
     category: "n8n",
     link: "/projects/facebook-ai-agent",
@@ -263,13 +232,7 @@ export const PROJECTS_V2: ProjectV2[] = [
       { label: "AVG RESPONSE TIME", value: "< 3 seconds" },
       { label: "LEAD CAPTURE", value: "+35%" },
     ],
-    toolsUsed: [
-      "n8n",
-      "Meta API",
-      "Gemini API",
-      "Google Sheets",
-      "Cloudflare Tunnel",
-    ],
+    toolsUsed: ["n8n", "Meta API", "Gemini API", "Google Sheets", "Cloudflare Tunnel"],
     videoUrl: "https://drive.google.com/file/d/YOUR_VIDEO_ID_HERE/view",
   },
 
@@ -278,8 +241,7 @@ export const PROJECTS_V2: ProjectV2[] = [
     title: "GHL Lead Nurturing System",
     description:
       "Complex GoHighLevel workflow for automated lead follow-ups, appointment booking, and CRM updates — triggered the moment a new lead comes in from Facebook Ads.",
-    image:
-      "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070&auto=format&fit=crop",
     tags: ["GHL", "Twilio", "Mailgun", "CRM Automation"],
     category: "GHL",
     link: "/projects/ghl-lead-system",
@@ -299,13 +261,7 @@ export const PROJECTS_V2: ProjectV2[] = [
       { label: "LEADS CAPTURED", value: "100%" },
       { label: "COST PER LEAD", value: "Reduced 30%" },
     ],
-    toolsUsed: [
-      "GHL",
-      "Twilio",
-      "Mailgun",
-      "Lead Connector API",
-      "FB Lead Forms",
-    ],
+    toolsUsed: ["GHL", "Twilio", "Mailgun", "Lead Connector API", "FB Lead Forms"],
     videoUrl: "https://drive.google.com/file/d/YOUR_VIDEO_ID_HERE/view",
   },
 
@@ -314,8 +270,7 @@ export const PROJECTS_V2: ProjectV2[] = [
     title: "Headless E-commerce Storefront",
     description:
       "High-performance web application built with Next.js and Shopify's Storefront API for maximum SEO, speed, and conversion — replacing a bloated CMS with a 99+ Lighthouse score.",
-    image:
-      "https://images.unsplash.com/photo-1472851294608-062f824d29cc?q=80&w=2070&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1472851294608-062f824d29cc?q=80&w=2070&auto=format&fit=crop",
     tags: ["Next.js", "Shopify", "Tailwind CSS", "TypeScript"],
     category: "Web Development",
     link: "/projects/headless-store",
@@ -335,13 +290,7 @@ export const PROJECTS_V2: ProjectV2[] = [
       { label: "BOUNCE RATE", value: "-25%" },
       { label: "CONVERSION RATE", value: "+15%" },
     ],
-    toolsUsed: [
-      "Next.js",
-      "Shopify Hydrogen",
-      "Tailwind CSS",
-      "Vercel",
-      "Framer Motion",
-    ],
+    toolsUsed: ["Next.js", "Shopify Hydrogen", "Tailwind CSS", "Vercel", "Framer Motion"],
     videoUrl: "https://drive.google.com/file/d/YOUR_VIDEO_ID_HERE/view",
   },
 ];
