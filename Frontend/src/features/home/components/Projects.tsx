@@ -1,10 +1,10 @@
 import { Link } from "@tanstack/react-router";
 import { FiArrowUpRight, FiChevronLeft, FiChevronRight, FiCheck } from "react-icons/fi";
 import { useState, useEffect, useRef } from "react";
-import type { Project } from "../constants/projects";
+import type { ProjectV2 } from "../../projects/constants/projects_v2";
 
 interface ProjectsProps {
-  projects: Project[];
+  projects: ProjectV2[];
 }
 
 export const Projects = ({ projects }: ProjectsProps) => {
@@ -83,64 +83,16 @@ const AutomationImpact = ({ impact }: { impact: { before: string; after: string 
   );
 };
 
-const ProjectCard = ({ project }: { project: Project }) => {
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
-
-  const nextImage = () => {
-    setCurrentImageIndex((prev) => (prev + 1) % project.images.length);
-  };
-
-  const prevImage = () => {
-    setCurrentImageIndex((prev) => (prev - 1 + project.images.length) % project.images.length);
-  };
-
+const ProjectCard = ({ project }: { project: ProjectV2 }) => {
   return (
     <div className="group flex flex-col gap-6">
       {/* Project Image Display */}
       <div className="relative overflow-hidden rounded-3xl border border-primary/5 bg-muted transition-all duration-500 hover:border-primary/10 max-h-96 flex items-center justify-center">
-        {project.images.map((image, idx) => (
-          <img
-            key={idx}
-            src={image}
-            alt={`${project.title} - view ${idx + 1}`}
-            className={`aspect-21/9 w-full object-cover transition-all duration-700 ${
-              idx === currentImageIndex ? "opacity-100 scale-100" : "opacity-0 scale-105 absolute inset-0"
-            }`}
-          />
-        ))}
-
-        {/* Multi-image indicators/controls */}
-        {project.images.length > 1 && (
-          <>
-            <div className="absolute inset-x-4 top-1/2 -translate-y-1/2 flex justify-between opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-              <button
-                onClick={prevImage}
-                className="size-8 rounded-full bg-black/40 text-white backdrop-blur-md flex items-center justify-center hover:bg-black/60 transition-colors pointer-events-auto"
-                aria-label="Previous image"
-              >
-                <FiChevronLeft className="size-5" />
-              </button>
-              <button
-                onClick={nextImage}
-                className="size-8 rounded-full bg-black/40 text-white backdrop-blur-md flex items-center justify-center hover:bg-black/60 transition-colors pointer-events-auto"
-                aria-label="Next image"
-              >
-                <FiChevronRight className="size-5" />
-              </button>
-            </div>
-
-            <div className="absolute bottom-6 inset-x-0 flex justify-center gap-1.5">
-              {project.images.map((_, idx) => (
-                <div
-                  key={idx}
-                  className={`h-0.5 transition-all rounded-full ${
-                    idx === currentImageIndex ? "w-8 bg-white" : "w-1.5 bg-white/40"
-                  }`}
-                />
-              ))}
-            </div>
-          </>
-        )}
+        <img
+          src={project.image}
+          alt={project.title}
+          className="aspect-21/9 w-full object-cover transition-all duration-700 scale-100 opacity-100"
+        />
       </div>
 
       {/* Project Details */}

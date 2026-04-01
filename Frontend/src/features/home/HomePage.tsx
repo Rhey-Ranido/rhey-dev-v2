@@ -6,7 +6,7 @@ import { ToolStack } from "./components/ToolStack";
 import { HowItWorks } from "./components/HowItWorks";
 import { Services } from "./components/Services";
 // import { BlogSection } from "./components/BlogSection";
-import { ONCE_UI, SHOP_SPARK, FLOW_TASK } from "./constants/projects";
+import { EMAIL_AI_ORGANIZER, LEAD_QUALIFICATION, FACEBOOK_AI_AGENT } from "./constants/projects";
 
 export const HomePage = () => {
   return (
@@ -20,7 +20,7 @@ export const HomePage = () => {
       {/* Featured Projects Section */}
       <Section className="py-20">
         <Container variant="narrow">
-          <Projects projects={[ONCE_UI]} />
+          <Projects projects={EMAIL_AI_ORGANIZER ? [EMAIL_AI_ORGANIZER] : []} />
         </Container>
       </Section>
 
@@ -40,7 +40,7 @@ export const HomePage = () => {
       {/* All Projects / Professional Work Section */}
       <Section className="py-20">
         <Container variant="narrow">
-          <Projects projects={[SHOP_SPARK]} />
+          <Projects projects={LEAD_QUALIFICATION ? [LEAD_QUALIFICATION] : []} />
         </Container>
       </Section>
 
@@ -59,7 +59,7 @@ export const HomePage = () => {
 
       <Section className="py-20">
         <Container variant="narrow">
-          <Projects projects={[FLOW_TASK]} />
+          <Projects projects={FACEBOOK_AI_AGENT ? [FACEBOOK_AI_AGENT] : []} />
         </Container>
       </Section>
     </>
