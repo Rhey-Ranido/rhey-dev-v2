@@ -60,8 +60,21 @@ export const ProjectDetailsDialog = ({ project, open, onOpenChange }: ProjectDet
                 <span className="px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-[11px] font-medium">
                   {project.category}
                 </span>
+                {/* View Website Link */}
+                {project.websiteUrl && (
+                  <a
+                    href={project.websiteUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={(e) => e.stopPropagation()}
+                    className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-500 text-[11px] font-medium hover:bg-indigo-500/20 transition-colors"
+                  >
+                    View Website
+                    <FiExternalLink className="size-3" />
+                  </a>
+                )}
                 {/* View Explanation Link */}
-                {project.videoUrl && (
+                {project.videoUrl && !project.websiteUrl && (
                   <a
                     href={project.videoUrl}
                     target="_blank"

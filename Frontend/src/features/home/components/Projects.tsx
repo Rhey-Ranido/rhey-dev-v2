@@ -110,7 +110,8 @@ const ProjectCard = ({ project }: { project: ProjectV2 }) => {
           <p className="text-base text-muted-foreground leading-relaxed">{project.description}</p>
 
           <Link
-            to={project.link}
+            to="/projects"
+            search={{ project: project.link }}
             className="inline-flex items-center gap-2 group/link text-primary hover:text-primary/80 font-medium transition-colors w-fit text-base"
           >
             Read case study

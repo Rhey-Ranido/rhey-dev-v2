@@ -6,11 +6,18 @@ import { ProjectDetailsDialog } from "./ProjectDetailsDialog";
 
 interface ProjectCardV2Props {
   project: ProjectV2;
+  /** Controlled open state - when provided, dialog state is managed externally */
+  open?: boolean;
+  onOpenChange?: (open: boolean) => void;
 }
 
-export const ProjectCardV2 = ({ project }: ProjectCardV2Props) => {
+export const ProjectCardV2 = ({ project, open, onOpenChange }: ProjectCardV2Props) => {
   const [isAutomated, setIsAutomated] = useState(false);
-  const [isDetailsOpen, setIsDetailsOpen] = useState(false);
+  // Use controlled state if provided, otherwise use internal state
+  const isInternalState = open === undefined;
+  const [internalOpen, setInternalOpen] = useState(false);
+  const isDetailsOpen = isInternalState ? internalOpen : open;
+  const setIsDetailsOpen = isInternalState ? setInternalOpen : (onOpenChange ?? (() => {}));
   const cardRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {

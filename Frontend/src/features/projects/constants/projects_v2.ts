@@ -23,6 +23,7 @@ export interface ProjectV2 {
   measuredResults?: MeasuredResult[];
   toolsUsed?: string[];
   videoUrl?: string;
+  websiteUrl?: string;
 }
 
 export const PROJECTS_V2: ProjectV2[] = [
@@ -291,6 +292,6 @@ export const PROJECTS_V2: ProjectV2[] = [
       { label: "CONVERSION RATE", value: "+15%" },
     ],
     toolsUsed: ["Next.js", "Shopify Hydrogen", "Tailwind CSS", "Vercel", "Framer Motion"],
-    videoUrl: "https://drive.google.com/file/d/YOUR_VIDEO_ID_HERE/view",
+    websiteUrl: "https://storefront.example.com",
   },
 ];
