@@ -60,7 +60,7 @@ export const StickySidebar = () => {
   };
 
   return (
-    <aside className="fixed left-6 top-1/2 -translate-y-1/2 z-40 hidden 2xl:flex flex-col gap-6">
+    <aside className="fixed left-6 top-1/2 -translate-y-1/2 z-40 2xl:flex flex-col gap-6">
       {navItems.map((item) => (
         <button
           key={item.id}
