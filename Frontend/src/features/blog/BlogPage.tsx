@@ -1,6 +1,5 @@
 import { Container } from "#/components/layout/Container";
 import { Section } from "#/components/layout/Section";
-import { HiArrowLeft } from "react-icons/hi";
 import { HiMiniSparkles } from "react-icons/hi2";
 
 export const BlogPage = () => {
@@ -24,7 +23,7 @@ export const BlogPage = () => {
 
               {/* Main Empty State Card */}
               <div className="bg-muted/30 border border-border rounded-[2rem] p-8 md:p-16 flex flex-col items-center text-center shadow-lg">
-                <div className="w-56 h-56 md:w-[24rem] md:h-[24rem] bg-emerald-400/20 rounded-3xl mb-10 flex items-center justify-center relative shadow-[0_0_50px_rgba(110,231,183,0.1)] overflow-hidden">
+                <div className="w-56 h-56 md:w-[24rem] md:h-96 bg-emerald-400/20 rounded-3xl mb-10 flex items-center justify-center relative shadow-[0_0_50px_rgba(110,231,183,0.1)] overflow-hidden">
                   <img
                     src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExa3YyM25jaDlxeTEzZmF1NnhrNDlwODIyOXV1eGd6c3E0eW9lcDd1YSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/XZrUw9cTqJ0vi8bmV9/giphy.gif"
                     alt="Automation animation"
