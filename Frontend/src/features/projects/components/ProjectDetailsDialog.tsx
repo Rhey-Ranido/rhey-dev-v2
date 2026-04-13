@@ -167,7 +167,7 @@ export const ProjectDetailsDialog = ({ project, open, onOpenChange }: ProjectDet
                   }
                   className="text-sm w-full justify-center"
                 >
-                  Book a Project Like This
+                  Disscuss a Project Like This
                 </ScheduleCallButton>
               </div>
 

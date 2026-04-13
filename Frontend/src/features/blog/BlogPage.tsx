@@ -60,24 +60,6 @@ export const BlogPage = () => {
                 </div>
               </section>
 
-              {/* Card 2: Subscribe CTA */}
-              <section className="bg-primary/5 border border-primary/20 rounded-2xl p-6">
-                <h3 className="font-semibold text-foreground mb-2">Stay Updated</h3>
-                <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
-                  Get notified when new content drops. No spam, just valuable automation insights.
-                </p>
-                <div className="flex items-center gap-2">
-                  <input
-                    type="email"
-                    placeholder="Enter your email"
-                    className="flex-1 px-3 py-2 text-sm bg-background border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50"
-                  />
-                  <button className="px-4 py-2 text-sm font-medium bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors">
-                    Subscribe
-                  </button>
-                </div>
-              </section>
-
               {/* Card 3: Topics */}
               <section className="bg-muted/20 border border-border/40 rounded-2xl p-6">
                 <h3 className="font-semibold text-foreground mb-4">Topics to Expect</h3>

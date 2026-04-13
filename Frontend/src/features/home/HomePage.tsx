@@ -6,6 +6,7 @@ import { ToolStack } from "./components/ToolStack";
 import { HowItWorks } from "./components/HowItWorks";
 import { Services } from "./components/Services";
 // import { BlogSection } from "./components/BlogSection";
+import { ContactAndBookingSection } from "./components/ContactAndBookingSection";
 import { EMAIL_AI_ORGANIZER, LEAD_QUALIFICATION, FACEBOOK_AI_AGENT } from "./constants/projects";
 
 export const HomePage = () => {
@@ -60,6 +61,13 @@ export const HomePage = () => {
       <Section className="py-20">
         <Container variant="narrow">
           <Projects projects={FACEBOOK_AI_AGENT ? [FACEBOOK_AI_AGENT] : []} />
+        </Container>
+      </Section>
+
+      {/* Contact and Booking Section */}
+      <Section className="bg-background text-foreground py-16 px-4 md:px-8">
+        <Container variant="narrow">
+          <ContactAndBookingSection />
         </Container>
       </Section>
     </>
