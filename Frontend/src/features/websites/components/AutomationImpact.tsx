@@ -1,6 +1,5 @@
 import { useState, useEffect, useRef } from "react";
 import { FiCheck } from "react-icons/fi";
-import { cn } from "#/lib/utils";
 
 export const AutomationImpact = ({ impact }: { impact: { before: string; after: string } }) => {
   const [isAutomated, setIsAutomated] = useState(false);

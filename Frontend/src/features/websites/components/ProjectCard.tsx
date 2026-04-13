@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState } from "react";
 import { FiArrowUpRight, FiChevronLeft, FiChevronRight } from "react-icons/fi";
 import { cn } from "#/lib/utils";
 import type { ProjectV2 } from "#/features/projects/constants/projects_v2";
@@ -80,7 +80,7 @@ export const ProjectCard = ({ project, onReadMoreClick }: ProjectCardProps) => {
           {images.map((img, idx) => (
             <div
               key={idx}
-              className="min-w-full h-full flex-shrink-0"
+              className="min-w-full h-full shrink-0"
             >
               <img
                 src={img}
@@ -131,7 +131,7 @@ export const ProjectCard = ({ project, onReadMoreClick }: ProjectCardProps) => {
                 key={idx}
                 onClick={(e) => goToImage(idx, e)}
                 className={cn(
-                  "w-16 h-10 rounded overflow-hidden border-2 transition-all flex-shrink-0",
+                  "w-16 h-10 rounded overflow-hidden border-2 transition-all shrink-0",
                   currentImageIndex === idx ? "border-white scale-105" : "border-transparent opacity-60 hover:opacity-100"
                 )}
               >

@@ -5,7 +5,6 @@ import { ProjectDetailsDialog } from "#/features/projects/components/ProjectDeta
 import { Container } from "#/components/layout/Container";
 import { Section } from "#/components/layout/Section";
 import { Hero } from "./components/Hero";
-import { ProjectCard } from "./components/ProjectCard";
 import { ProjectShowcase } from "./components/ProjectShowcase";
 import { Pricing } from "#/features/home/components/Pricing";
 import { WhatsIncluded } from "./components/WhatsIncluded";

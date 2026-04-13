@@ -4,7 +4,6 @@ import {
   SiTailwindcss, 
   SiTypescript, 
   SiVite,
-  SiGoogledrive,
   SiStripe,
   SiGithub
 } from "react-icons/si";
