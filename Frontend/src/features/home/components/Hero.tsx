@@ -22,13 +22,12 @@ export const Hero = () => {
 
       {/* Main Heading */}
       <h1 className="max-w-4xl mb-8 text-5xl font-bold tracking-tight text-foreground md:text-7xl lg:text-8xl animate-in fade-in slide-in-from-bottom-4 duration-1000 text-balance">
-        Reclaiming hours one workflow at a time
+        I turn slow GHL sites into fast, converting websites
       </h1>
 
       {/* Description */}
       <p className="max-w-2xl mb-12 text-lg leading-relaxed text-muted-foreground md:text-xl animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-200">
-        I'm Christian, an automation expert who turns repetitive manual tasks into reliable systems — so founders and
-        teams get their time back.
+        I'm Christian Rhey Ranido, a GHL Website Redesign Specialist. I transform outdated GoHighLevel websites into modern, high-performing React sites — starting at just $87/month with $0 down.
       </p>
 
       {/* Profile Pill */}

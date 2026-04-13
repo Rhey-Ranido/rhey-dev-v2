@@ -11,7 +11,7 @@ export const HowItWorks = () => {
       <div className="text-center mb-16 md:mb-20">
         <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-6 tracking-tight">How It Works</h2>
         <p className="text-muted-foreground text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
-          I follow a simple 5-step process to fast-track your needs and deliver the perfect solution.
+          From audit to launch in 5 simple steps. I handle everything while you focus on your business.
         </p>
       </div>
       {/* Steps Grid */}

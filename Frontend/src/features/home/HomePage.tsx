@@ -4,7 +4,7 @@ import { Hero } from "./components/Hero";
 import { Projects } from "./components/Projects";
 import { ToolStack } from "./components/ToolStack";
 import { HowItWorks } from "./components/HowItWorks";
-import { Services } from "./components/Services";
+import { Pricing } from "./components/Pricing";
 // import { BlogSection } from "./components/BlogSection";
 import { ContactAndBookingSection } from "./components/ContactAndBookingSection";
 import { EMAIL_AI_ORGANIZER, LEAD_QUALIFICATION, FACEBOOK_AI_AGENT } from "./constants/projects";
@@ -25,10 +25,10 @@ export const HomePage = () => {
         </Container>
       </Section>
 
-      {/* Services Section */}
+      {/* pricing Section */}
       <Section className="py-20 border-y border-border/40">
-        <Container variant="wide">
-          <Services />
+        <Container variant="narrow">
+          <Pricing />
         </Container>
       </Section>
 

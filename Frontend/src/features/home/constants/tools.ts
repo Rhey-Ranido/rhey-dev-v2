@@ -1,16 +1,14 @@
 import { 
-  SiZapier, 
-  SiMake, 
-  SiSlack, 
-  SiNotion, 
-  SiAirtable, 
-  SiAsana, 
-  SiDiscord, 
-  SiOpenai, 
-  SiLinear, 
+  SiReact, 
+  SiVercel, 
+  SiTailwindcss, 
+  SiTypescript, 
+  SiVite,
   SiGoogledrive,
-  SiN8N
+  SiStripe,
+  SiGithub
 } from "react-icons/si";
+import { FiCode, FiLayout, FiServer, FiSmartphone } from "react-icons/fi";
 
 export interface Tool {
   name: string;
@@ -18,15 +16,15 @@ export interface Tool {
 }
 
 export const TOOLS: Tool[] = [
-  { name: "Zapier", icon: SiZapier },
-  { name: "n8n", icon: SiN8N },
-  { name: "Asana", icon: SiAsana },
-  { name: "Slack", icon: SiSlack },
-  { name: "Make", icon: SiMake },
-  { name: "Notion", icon: SiNotion },
-  { name: "Airtable", icon: SiAirtable },
-  { name: "Discord", icon: SiDiscord },
-  { name: "Google", icon: SiGoogledrive },
-  { name: "Linear", icon: SiLinear },
-  { name: "OpenAI", icon: SiOpenai },
+  { name: "React", icon: SiReact },
+  { name: "Vite", icon: SiVite },
+  { name: "TypeScript", icon: SiTypescript },
+  { name: "Tailwind CSS", icon: SiTailwindcss },
+  { name: "Vercel", icon: SiVercel },
+  { name: "GoHighLevel", icon: FiLayout },
+  { name: "GitHub", icon: SiGithub },
+  { name: "Stripe", icon: SiStripe },
+  { name: "Responsive Design", icon: FiSmartphone },
+  { name: "Performance", icon: FiServer },
+  { name: "Clean Code", icon: FiCode },
 ];

@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "#/components/ui/Dialog";
 import { cn } from "#/lib/utils";
 import type { ProjectV2 } from "../constants/projects_v2";
-import { FaBookOpen, FaPlay } from "react-icons/fa";
+import { FaBookOpen, FaPlay, FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { FiExternalLink, FiChevronRight } from "react-icons/fi";
 import { ScheduleCallButton } from "#/components/ui/ScheduleCallButton";
 
@@ -14,6 +14,20 @@ interface ProjectDetailsDialogProps {
 
 export const ProjectDetailsDialog = ({ project, open, onOpenChange }: ProjectDetailsDialogProps) => {
   const [isZoomed, setIsZoomed] = useState(false);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  // Use images array if available, otherwise fallback to single image
+  const images = project.images && project.images.length > 0 ? project.images : [project.image];
+
+  const goToNextImage = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    setCurrentImageIndex((prev) => (prev + 1) % images.length);
+  };
+
+  const goToPrevImage = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    setCurrentImageIndex((prev) => (prev - 1 + images.length) % images.length);
+  };
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
@@ -23,7 +37,7 @@ export const ProjectDetailsDialog = ({ project, open, onOpenChange }: ProjectDet
       >
         {/* Two-column layout: image left, content right */}
         <div className="flex flex-col md:flex-row h-full max-h-[90vh]">
-          {/* Left — Image block */}
+          {/* Left — Image block with gallery navigation */}
           <div
             className={cn(
               "relative md:w-2/5 w-full shrink-0 overflow-hidden md:rounded-l-xl rounded-t-xl md:rounded-tr-none",
@@ -33,17 +47,67 @@ export const ProjectDetailsDialog = ({ project, open, onOpenChange }: ProjectDet
             onClick={() => setIsZoomed(!isZoomed)}
           >
             <img
-              src={project.image}
-              alt={project.title}
+              src={images[currentImageIndex]}
+              alt={`${project.title} - Image ${currentImageIndex + 1}`}
               className={cn(
                 "w-full h-full object-cover transition-transform duration-500 ease-in-out",
                 isZoomed ? "scale-100" : "scale-110",
               )}
             />
             {/* Zoom hint */}
-            <div className="absolute bottom-3 left-1/2 -translate-x-1/2 bg-black/50 backdrop-blur-sm text-white/70 text-[10px] px-3 py-1 rounded-full pointer-events-none whitespace-nowrap">
-              {isZoomed ? "Click to zoom in" : "Click to zoom out"}
+            <div className="absolute bottom-3 left-1/2 -translate-x-1/2 bg-black/50 backdrop-blur-sm text-white/70 text-[10px] px-3 py-1 rounded-full pointer-events-none whitespace-nowrap z-10">
+              {isZoomed ? "Click to zoom out" : "Click to zoom in"}
             </div>
+
+            {/* Image Navigation Arrows - only show if multiple images */}
+            {images.length > 1 && (
+              <>
+                {/* Previous button */}
+                <button
+                  onClick={goToPrevImage}
+                  className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 backdrop-blur-sm text-white w-8 h-8 rounded-full flex items-center justify-center transition-colors z-10"
+                  aria-label="Previous image"
+                >
+                  <FaChevronLeft className="size-4" />
+                </button>
+                {/* Next button */}
+                <button
+                  onClick={goToNextImage}
+                  className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 backdrop-blur-sm text-white w-8 h-8 rounded-full flex items-center justify-center transition-colors z-10"
+                  aria-label="Next image"
+                >
+                  <FaChevronRight className="size-4" />
+                </button>
+              </>
+            )}
+
+            {/* Image Counter - only show if multiple images */}
+            {images.length > 1 && (
+              <div className="absolute top-3 left-1/2 -translate-x-1/2 bg-black/50 backdrop-blur-sm text-white text-[10px] px-3 py-1 rounded-full pointer-events-none whitespace-nowrap z-10">
+                {currentImageIndex + 1} / {images.length}
+              </div>
+            )}
+
+            {/* Thumbnail Navigation - only show if 3+ images */}
+            {images.length > 2 && (
+              <div className="absolute bottom-12 left-1/2 -translate-x-1/2 flex gap-2 z-10">
+                {images.map((img, idx) => (
+                  <button
+                    key={idx}
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      setCurrentImageIndex(idx);
+                    }}
+                    className={cn(
+                      "w-12 h-8 rounded overflow-hidden border-2 transition-all",
+                      currentImageIndex === idx ? "border-white scale-105" : "border-transparent opacity-60 hover:opacity-100"
+                    )}
+                  >
+                    <img src={img} alt={`Thumbnail ${idx + 1}`} className="w-full h-full object-cover" />
+                  </button>
+                ))}
+              </div>
+            )}
           </div>
 
           {/* Right — Content block */}
@@ -167,23 +231,9 @@ export const ProjectDetailsDialog = ({ project, open, onOpenChange }: ProjectDet
                   }
                   className="text-sm w-full justify-center"
                 >
-                  Disscuss a Project Like This
+                  Discuss a Project Like This
                 </ScheduleCallButton>
               </div>
-
-              {/* Bottom View Explanation CTA
-              {project.videoUrl && (
-                <a
-                  href={project.videoUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-2 w-full py-3 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-500 text-sm font-medium hover:bg-emerald-500/20 transition-colors group"
-                >
-                  <FaPlay className="size-3 group-hover:scale-110 transition-transform" />
-                  Watch Workflow Explanation
-                  <FiExternalLink className="size-4" />
-                </a>
-              )} */}
             </div>
           </div>
         </div>

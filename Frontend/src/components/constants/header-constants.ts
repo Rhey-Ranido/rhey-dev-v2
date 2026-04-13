@@ -1,4 +1,4 @@
-import { FiHome, FiUser, FiGrid, FiBookOpen, FiSun, FiMoon } from "react-icons/fi";
+import { FiHome, FiUser, FiGrid, FiBookOpen, FiGlobe, FiSun, FiMoon } from "react-icons/fi";
 
 export const NAV_ITEMS = [
   {
@@ -7,7 +7,12 @@ export const NAV_ITEMS = [
     icon: FiUser,
   },
   {
-    label: "Projects",
+    label: "Websites",
+    href: "/websites",
+    icon: FiGlobe,
+  },
+  {
+    label: "Automations",
     href: "/projects",
     icon: FiGrid,
   },

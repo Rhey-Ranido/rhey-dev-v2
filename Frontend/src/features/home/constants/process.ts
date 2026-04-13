@@ -1,4 +1,4 @@
-import { FaSearch, FaMap, FaWrench, FaRocket, FaUserShield } from "react-icons/fa";
+import { FaSearch, FaFileInvoice, FaPaintBrush, FaRocket, FaUserShield } from "react-icons/fa";
 
 export interface ProcessStep {
   icon: React.ElementType;
@@ -11,31 +11,31 @@ export const PROCESS_STEPS: ProcessStep[] = [
   {
     icon: FaSearch,
     number: "1",
-    title: "Discovery Call",
-    description: "We map your current workflow bottlenecks and identify the highest-impact automation opportunities in your business.",
+    title: "Free Site Audit",
+    description: "I analyze your current GHL website — count pages, identify forms, CTAs, and existing features to create a detailed redesign plan.",
   },
   {
-    icon: FaMap,
+    icon: FaFileInvoice,
     number: "2",
-    title: "Strategy Design",
-    description: "We architect your custom AI automation blueprint — no templates, no cookie-cutter solutions. Built around how your business actually works.",
+    title: "Quote & Proposal",
+    description: "You receive a clear proposal with package options and any add-ons needed. Choose the monthly plan ($87/mo+) or one-time payment.",
   },
   {
-    icon: FaWrench,
+    icon: FaPaintBrush,
     number: "3",
-    title: "Build & Test",
-    description: "We build and rigorously test every workflow before it touches your real business. You see it working before we go live.",
+    title: "Design & Develop",
+    description: "I redesign your site in React with modern UI, preserving all your existing functionality while dramatically improving performance and design.",
   },
   {
     icon: FaRocket,
     number: "4",
-    title: "Launch & Train",
-    description: "We deploy your system live and walk your team through operating it. I personally ensures a smooth handoff.",
+    title: "Deploy on Vercel",
+    description: "Your new site goes live on Vercel for blazing-fast global performance. I handle the deployment and ensure everything works perfectly.",
   },
   {
     icon: FaUserShield,
     number: "5",
-    title: "Ongoing Support",
-    description: "We monitor, optimize, and evolve your automations as your business grows. Your AI system gets smarter over time.",
+    title: "Care Plan & Support",
+    description: "Enjoy 2 months free support. Then optionally continue with a Website Care Plan for hosting, updates, and ongoing peace of mind.",
   },
 ];

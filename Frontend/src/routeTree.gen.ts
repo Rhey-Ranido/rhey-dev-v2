@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as AppRouteRouteImport } from './routes/_app/route'
 import { Route as AppIndexRouteImport } from './routes/_app/index'
+import { Route as AppWebsitesRouteImport } from './routes/_app/websites'
 import { Route as AppProjectsRouteImport } from './routes/_app/projects'
 import { Route as AppBlogRouteImport } from './routes/_app/blog'
 import { Route as AppAboutRouteImport } from './routes/_app/about'
@@ -22,6 +23,11 @@ const AppRouteRoute = AppRouteRouteImport.update({
 const AppIndexRoute = AppIndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => AppRouteRoute,
+} as any)
+const AppWebsitesRoute = AppWebsitesRouteImport.update({
+  id: '/websites',
+  path: '/websites',
   getParentRoute: () => AppRouteRoute,
 } as any)
 const AppProjectsRoute = AppProjectsRouteImport.update({
@@ -45,11 +51,13 @@ export interface FileRoutesByFullPath {
   '/about': typeof AppAboutRoute
   '/blog': typeof AppBlogRoute
   '/projects': typeof AppProjectsRoute
+  '/websites': typeof AppWebsitesRoute
 }
 export interface FileRoutesByTo {
   '/about': typeof AppAboutRoute
   '/blog': typeof AppBlogRoute
   '/projects': typeof AppProjectsRoute
+  '/websites': typeof AppWebsitesRoute
   '/': typeof AppIndexRoute
 }
 export interface FileRoutesById {
@@ -58,19 +66,21 @@ export interface FileRoutesById {
   '/_app/about': typeof AppAboutRoute
   '/_app/blog': typeof AppBlogRoute
   '/_app/projects': typeof AppProjectsRoute
+  '/_app/websites': typeof AppWebsitesRoute
   '/_app/': typeof AppIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/about' | '/blog' | '/projects'
+  fullPaths: '/' | '/about' | '/blog' | '/projects' | '/websites'
   fileRoutesByTo: FileRoutesByTo
-  to: '/about' | '/blog' | '/projects' | '/'
+  to: '/about' | '/blog' | '/projects' | '/websites' | '/'
   id:
     | '__root__'
     | '/_app'
     | '/_app/about'
     | '/_app/blog'
     | '/_app/projects'
+    | '/_app/websites'
     | '/_app/'
   fileRoutesById: FileRoutesById
 }
@@ -92,6 +102,13 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof AppIndexRouteImport
+      parentRoute: typeof AppRouteRoute
+    }
+    '/_app/websites': {
+      id: '/_app/websites'
+      path: '/websites'
+      fullPath: '/websites'
+      preLoaderRoute: typeof AppWebsitesRouteImport
       parentRoute: typeof AppRouteRoute
     }
     '/_app/projects': {
@@ -122,6 +139,7 @@ interface AppRouteRouteChildren {
   AppAboutRoute: typeof AppAboutRoute
   AppBlogRoute: typeof AppBlogRoute
   AppProjectsRoute: typeof AppProjectsRoute
+  AppWebsitesRoute: typeof AppWebsitesRoute
   AppIndexRoute: typeof AppIndexRoute
 }
 
@@ -129,6 +147,7 @@ const AppRouteRouteChildren: AppRouteRouteChildren = {
   AppAboutRoute: AppAboutRoute,
   AppBlogRoute: AppBlogRoute,
   AppProjectsRoute: AppProjectsRoute,
+  AppWebsitesRoute: AppWebsitesRoute,
   AppIndexRoute: AppIndexRoute,
 }
 

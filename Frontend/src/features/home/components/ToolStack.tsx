@@ -8,8 +8,8 @@ export const ToolStack = () => {
   return (
     <div className="flex flex-col gap-12 overflow-hidden">
       <SectionHeader
-        title="Core Automation Stack"
-        description="The essential tools I use to build fast, scalable, and reliable workflows every day."
+        title="Core Web Development Stack"
+        description="The modern technologies I use to build fast, high-converting websites that outperform GHL sites."
       />
 
       <div className="relative flex flex-col gap-6 w-full">
