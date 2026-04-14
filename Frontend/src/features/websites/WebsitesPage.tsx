@@ -8,6 +8,7 @@ import { Hero } from "./components/Hero";
 import { ProjectShowcase } from "./components/ProjectShowcase";
 import { Pricing } from "#/features/home/components/Pricing";
 import { WhatsIncluded } from "./components/WhatsIncluded";
+import { ContactAndBookingSection } from "#/features/home/components/ContactAndBookingSection";
 import { BackgroundGradient } from "#/components/BackgroundGradient";
 
 export const WebsitesPage = () => {
@@ -38,13 +39,20 @@ export const WebsitesPage = () => {
 
       {/* Pricing Section */}
       <Section className="py-20">
-        <Container variant="wide">
+        <Container variant="narrow">
           <Pricing />
         </Container>
       </Section>
 
       {/* What's Included */}
       <WhatsIncluded />
+
+      {/* Contact and Booking Section */}
+      <Section className="py-20">
+        <Container variant="narrow">
+          <ContactAndBookingSection />
+        </Container>
+      </Section>
 
       {/* Project Details Dialog */}
       {selectedProject && (

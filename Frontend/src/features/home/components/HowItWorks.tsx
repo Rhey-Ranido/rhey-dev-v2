@@ -46,6 +46,9 @@ export const HowItWorks = () => {
       <div className="flex justify-center">
         <ScheduleCallButton
           className="h-12 px-8 text-lg"
+          href="https://calendly.com/christianrheyranido/30min"
+          target="_blank"
+          rel="noopener noreferrer"
           chevronIcon={<FiChevronsRight className="size-4 transition-transform group-hover:translate-x-1" />}
         />
       </div>

@@ -5,6 +5,7 @@ import { AboutHero } from "./components/AboutHero";
 import { Experience, Studies } from "./components/ExperienceAndStudies";
 import { ProfileInfo } from "./components/ProfileInfo";
 import { Skills } from "./components/Skills";
+import { ContactAndBookingSection } from "#/features/home/components/ContactAndBookingSection";
 import { BackgroundGradient } from "#/components/BackgroundGradient";
 
 export const AboutPage = () => {
@@ -37,6 +38,9 @@ export const AboutPage = () => {
                 </div>
                 <div id="skills">
                   <Skills />
+                </div>
+                <div id="contact">
+                  <ContactAndBookingSection />
                 </div>
               </div>
             </main>

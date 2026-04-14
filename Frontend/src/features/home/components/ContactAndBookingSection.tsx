@@ -46,13 +46,13 @@ export const ContactAndBookingSection = () => {
       {/* CONTAINER with Calendly and Buttons */}
       <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
         {/* LEFT: Calendly Container */}
-        <div
-          className={cn(
-            "relative flex flex-col rounded-2xl overflow-hidden transition-all duration-300",
-            "bg-muted/20 border border-border/60 hover:border-border hover:bg-muted/30",
-            "after:absolute after:inset-0 after:rounded-2xl after:bg-linear-to-tr after:from-primary/5 after:to-transparent after:opacity-0 hover:after:opacity-100 after:transition-opacity",
-          )}
-        >
+          <div
+            className={cn(
+              "relative flex flex-col transition-all duration-300",
+              "bg-muted/20 border border-border/60 hover:border-border hover:bg-muted/30",
+              "after:absolute after:inset-0 after:rounded-2xl after:bg-linear-to-tr after:from-primary/5 after:to-transparent after:opacity-0 hover:after:opacity-100 after:transition-opacity after:pointer-events-none",
+            )}
+          >
           {/* Header */}
           <div className="relative z-10 flex items-center gap-2 p-6 border-b border-border/40">
             <div className="p-2 rounded-lg bg-primary/10 border border-primary/20 text-primary">
@@ -65,7 +65,7 @@ export const ContactAndBookingSection = () => {
 
           {/* Embedded Calendly Inline Widget */}
           <InlineWidget
-            url="https://calendly.com/your-calendly-username/30min"
+            url="https://calendly.com/christianrheyranido/30min"
             styles={{ height: "630px", minWidth: "320px" }}
           />
         </div>
@@ -93,14 +93,14 @@ export const ContactAndBookingSection = () => {
               label="Hire me on Upwork"
             />
             <SocialLinkButton
-              href="https://www.linkedin.com/in/yourprofile/"
+              href="https://www.linkedin.com/in/christianrheyranido"
               icon={<FaLinkedin className="size-5" />}
               label="Connect on LinkedIn"
             />
             <SocialLinkButton
-              href="mailto:edautomate@gmail.com?subject=Inquiry%20from%20Website"
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=christianrheyranido@gmail.com"
               icon={<MdEmail className="size-5" />}
-              label="Email: edautomate@gmail.com"
+              label="christianrheyranido@gmail.com"
             />
           </div>
         </div>

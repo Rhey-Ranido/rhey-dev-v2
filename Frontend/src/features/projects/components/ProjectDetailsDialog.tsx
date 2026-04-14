@@ -225,7 +225,9 @@ export const ProjectDetailsDialog = ({ project, open, onOpenChange }: ProjectDet
               {/* Book a Project CTA */}
               <div className="pt-2">
                 <ScheduleCallButton
-                  href="https://calendly.com/YOUR_CALENDLY_LINK"
+                  href="https://calendly.com/christianrheyranido/30min"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   chevronIcon={
                     <FiChevronRight className="size-4 text-foreground/50 group-hover:translate-x-0.5 transition-transform" />
                   }

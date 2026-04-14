@@ -7,6 +7,7 @@ import { BackgroundGradient } from "#/components/BackgroundGradient";
 import { Container } from "#/components/layout/Container";
 import { Section } from "#/components/layout/Section";
 import { Hero } from "./components/Hero";
+import { ContactAndBookingSection } from "#/features/home/components/ContactAndBookingSection";
 
 const CATEGORIES: (ProjectCategory | "All")[] = ["All", "GHL", "Make", "n8n", "Zapier", "Web Development"];
 
@@ -66,6 +67,11 @@ export const ProjectPage = () => {
                 onOpenChange={openProject?.link === project.link ? handleCloseDialog : undefined}
               />
             ))}
+          </div>
+
+          {/* Contact and Booking Section */}
+          <div className="mt-24">
+            <ContactAndBookingSection />
           </div>
         </Section>
       </Container>

@@ -20,6 +20,9 @@ export const AboutHero = () => {
       {/* Schedule Link */}
       <div className="w-fit">
         <ScheduleCallButton
+          href="https://calendly.com/christianrheyranido/30min"
+          target="_blank"
+          rel="noopener noreferrer"
           chevronIcon={<FiChevronRight className="size-3 sm:size-4 transition-transform group-hover:translate-x-1" />}
         />
       </div>

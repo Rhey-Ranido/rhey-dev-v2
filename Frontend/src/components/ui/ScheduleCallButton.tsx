@@ -6,6 +6,8 @@ interface ScheduleCallButtonProps {
   children?: React.ReactNode;
   chevronIcon: React.ReactNode;
   className?: string;
+  target?: string;
+  rel?: string;
 }
 
 export const ScheduleCallButton = ({
@@ -13,10 +15,14 @@ export const ScheduleCallButton = ({
   children = "Schedule a call",
   chevronIcon,
   className,
+  target,
+  rel,
 }: ScheduleCallButtonProps) => {
   return (
     <a
       href={href}
+      target={target}
+      rel={rel}
       className={cn(
         "group flex items-center gap-2 px-4 py-2 sm:gap-3 sm:px-6 sm:py-2.5 rounded-full border border-primary/30 bg-primary/5 hover:bg-primary/10 transition-all text-foreground/90 backdrop-blur-sm",
         className
