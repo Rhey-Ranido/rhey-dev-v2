@@ -21,7 +21,7 @@ export const Hero = () => {
       </div> */}
 
       {/* Main Heading */}
-      <h1 className="max-w-4xl mb-8 text-7xl font-bold tracking-tight leading-tight text-foreground  animate-in fade-in slide-in-from-bottom-4 duration-1000 text-balance">
+      <h1 className="max-w-4xl mb-8 text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-tight text-foreground animate-in fade-in slide-in-from-bottom-4 duration-1000 text-balance">
         Website Redesigns for Businesses With Taste
       </h1>
 

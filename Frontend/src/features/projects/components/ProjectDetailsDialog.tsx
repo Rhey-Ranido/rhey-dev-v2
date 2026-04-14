@@ -42,6 +42,7 @@ export const ProjectDetailsDialog = ({ project, open, onOpenChange }: ProjectDet
             className={cn(
               "relative md:w-2/5 w-full shrink-0 overflow-hidden md:rounded-l-xl rounded-t-xl md:rounded-tr-none",
               "md:min-h-full min-h-56",
+              "max-h-[40vh] md:max-h-full",
               isZoomed ? "cursor-zoom-out" : "cursor-zoom-in",
             )}
             onClick={() => setIsZoomed(!isZoomed)}

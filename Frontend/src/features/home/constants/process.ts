@@ -12,7 +12,7 @@ export const PROCESS_STEPS: ProcessStep[] = [
     icon: FaSearch,
     number: "1",
     title: "Free Site Audit",
-    description: "I analyze your current GHL website — count pages, identify forms, CTAs, and existing features to create a detailed redesign plan.",
+    description: "I analyze your current GHL website. Count pages, identify forms, CTAs, and existing features to create a detailed redesign plan.",
   },
   {
     icon: FaFileInvoice,
@@ -30,12 +30,12 @@ export const PROCESS_STEPS: ProcessStep[] = [
     icon: FaRocket,
     number: "4",
     title: "Deploy on Vercel",
-    description: "Your new site goes live on Vercel for blazing-fast global performance. I handle the deployment and ensure everything works perfectly.",
+    description: "Your new site goes live on Vercel for fast global performance. I handle the deployment and ensure everything works perfectly.",
   },
   {
     icon: FaUserShield,
     number: "5",
-    title: "Care Plan & Support",
-    description: "Enjoy 2 months free support. Then optionally continue with a Website Care Plan for hosting, updates, and ongoing peace of mind.",
+    title: "Ongoing Support",
+    description: "Monthly Reports and Ongoing support is available for hosting, updates, and long term peace of mind.",
   },
 ];

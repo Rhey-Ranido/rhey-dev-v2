@@ -51,7 +51,7 @@ export const HomePage = () => {
 
       {/* How It Works Section */}
       <Section className="py-20">
-        <Container variant="wide">
+        <Container variant="narrow">
           <HowItWorks />
         </Container>
       </Section>

@@ -88,7 +88,7 @@ export const ContactAndBookingSection = () => {
           {/* Buttons Column */}
           <div className="flex flex-col gap-3 mt-2">
             <SocialLinkButton
-              href="https://www.upwork.com/freelancers/~01XXXXXXXXXXXXXX"
+              href="https://www.upwork.com/freelancers/~0192a049ce677e595e"
               icon={<FaUpwork className="size-5" />}
               label="Hire me on Upwork"
             />

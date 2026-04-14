@@ -6,9 +6,9 @@ export const PROFILE = {
   avatar: "https://github.com/Rhey-Ranido.png",
   bio: "I help small business owners, coaches, and marketing agencies transform their slow, outdated GoHighLevel websites into fast, modern, high-converting React sites. With $0 down and plans starting at $87/month, I make professional website redesigns accessible to everyone.",
   socials: [
-    { name: "LinkedIn", link: "https://linkedin.com" },
-    { name: "Upwork", link: "https://upwork.com" },
-    { name: "Email", link: "mailto:rhey@example.com" },
+    { name: "LinkedIn", link: "https://www.linkedin.com/in/christianrheyranido" },
+    { name: "Upwork", link: "https://www.upwork.com/freelancers/~0192a049ce677e595e" },
+    { name: "Email", link: "https://mail.google.com/mail/?view=cm&fs=1&to=christianrheyranido@gmail.com" },
   ],
 };
 
