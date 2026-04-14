@@ -1,10 +1,13 @@
 import { Container } from "#/components/layout/Container";
 import { Section } from "#/components/layout/Section";
 import { HiMiniSparkles } from "react-icons/hi2";
+import { BackgroundGradient } from "#/components/BackgroundGradient";
 
 export const BlogPage = () => {
   return (
-    <div className="min-h-screen bg-background text-foreground">
+    <div className="relative min-h-screen bg-background text-foreground">
+      <BackgroundGradient />
+      
       <Section className="flex items-center min-h-[90vh]">
         <Container variant="narrow">
           <main className="grid grid-cols-1 lg:grid-cols-12 gap-8">

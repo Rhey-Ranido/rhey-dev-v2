@@ -21,13 +21,14 @@ export const Hero = () => {
       </div> */}
 
       {/* Main Heading */}
-      <h1 className="max-w-4xl mb-8 text-5xl font-bold tracking-tight text-foreground md:text-7xl lg:text-8xl animate-in fade-in slide-in-from-bottom-4 duration-1000 text-balance">
-        I turn slow GHL sites into fast, converting websites
+      <h1 className="max-w-4xl mb-8 text-7xl font-bold tracking-tight leading-tight text-foreground  animate-in fade-in slide-in-from-bottom-4 duration-1000 text-balance">
+        Redesigns for Agencies That Refuse to Look Average
       </h1>
 
       {/* Description */}
       <p className="max-w-2xl mb-12 text-lg leading-relaxed text-muted-foreground md:text-xl animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-200">
-        I'm Christian Rhey Ranido, a GHL Website Redesign Specialist. I transform outdated GoHighLevel websites into modern, high-performing React sites — starting at just $87/month with $0 down.
+        I'm Christian Rhey Ranido, a GHL Website Redesign Specialist. I transform outdated GoHighLevel websites into
+        modern, high-performing React sites — starting at just $87/month with $0 down.
       </p>
 
       {/* Profile Pill */}

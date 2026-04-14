@@ -6,6 +6,7 @@ import { CategoryFilter } from "./components/CategoryFilter";
 import { BackgroundGradient } from "#/components/BackgroundGradient";
 import { Container } from "#/components/layout/Container";
 import { Section } from "#/components/layout/Section";
+import { Hero } from "./components/Hero";
 
 const CATEGORIES: (ProjectCategory | "All")[] = ["All", "GHL", "Make", "n8n", "Zapier", "Web Development"];
 
@@ -43,23 +44,12 @@ export const ProjectPage = () => {
   );
 
   return (
-    <div className="relative min-h-screen pt-20 md:pt-28">
+    <div className="relative min-h-screen ">
       <BackgroundGradient />
       
       <Container variant="narrow">
         <Section >
-          {/* Enhanced Heading Style matching Services.tsx */}
-          <div className="flex flex-col gap-2 items-center text-center mb-12 md:mb-16">
-            <span className="text-sm font-medium uppercase tracking-widest text-primary/80">
-              Portfolio
-            </span>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground tracking-tight">
-              My Projects
-            </h1>
-            <p className="mt-4 text-muted-foreground text-lg max-w-2xl mx-auto leading-relaxed">
-              A collection of automations and web applications built to solve real-world problems.
-            </p>
-          </div>
+          <Hero />
 
           <CategoryFilter 
             categories={CATEGORIES}

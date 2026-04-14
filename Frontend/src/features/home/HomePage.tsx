@@ -8,15 +8,19 @@ import { Pricing } from "./components/Pricing";
 // import { BlogSection } from "./components/BlogSection";
 import { ContactAndBookingSection } from "./components/ContactAndBookingSection";
 import { EMAIL_AI_ORGANIZER, LEAD_QUALIFICATION, FACEBOOK_AI_AGENT } from "./constants/projects";
+import { BackgroundGradient } from "#/components/BackgroundGradient";
 
 export const HomePage = () => {
   return (
     <>
-      <Section className="flex items-center min-h-[90vh]">
-        <Container variant="wide">
-          <Hero />
-        </Container>
-      </Section>
+      <div className="relative">
+        <BackgroundGradient />
+        <Section className="flex items-center min-h-[90vh]">
+          <Container variant="wide">
+            <Hero />
+          </Container>
+        </Section>
+      </div>
 
       {/* Featured Projects Section */}
       <Section className="py-20">

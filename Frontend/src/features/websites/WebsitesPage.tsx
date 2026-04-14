@@ -8,6 +8,7 @@ import { Hero } from "./components/Hero";
 import { ProjectShowcase } from "./components/ProjectShowcase";
 import { Pricing } from "#/features/home/components/Pricing";
 import { WhatsIncluded } from "./components/WhatsIncluded";
+import { BackgroundGradient } from "#/components/BackgroundGradient";
 
 export const WebsitesPage = () => {
   const [selectedProject, setSelectedProject] = useState<ProjectV2 | null>(null);
@@ -26,7 +27,9 @@ export const WebsitesPage = () => {
   };
 
   return (
-    <div className="min-h-screen bg-background text-foreground">
+    <div className="relative min-h-screen text-foreground">
+      <BackgroundGradient />
+      
       {/* Hero Section */}
       <Hero />
 
